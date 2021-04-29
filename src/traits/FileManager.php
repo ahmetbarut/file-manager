@@ -1,8 +1,8 @@
 <?php
 
-namespace ahmetbarut\core;
+namespace ahmetbarut\traits;
 
-class FileManager
+trait FileManager
 {
     /** 
      * Dosyayı düz metin olarak okur. 
@@ -53,4 +53,5 @@ class FileManager
         fclose($st);
         return ($write === false) ? false : true;
     }
+
 }
