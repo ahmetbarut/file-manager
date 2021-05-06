@@ -2,7 +2,7 @@
 
 namespace ahmetbarut\traits;
 
-trait FileManager
+class FileManager
 {
     /** 
      * Dosyayı düz metin olarak okur. 

@@ -2,11 +2,11 @@
 
 namespace ahmetbarut\core;
 
+use ahmetbarut\traits\DirectoryManager;
 use ahmetbarut\traits\FileManager;
 
-class Manager
+class Manager extends DirectoryManager
 {
-    use FileManager;
 
     /** Dosya boyutunu döndürür.
      *  @param $bytes
@@ -35,19 +35,19 @@ class Manager
      *  @param string $file
      *  @return array
      */
-    public function property(string $file):array
+    public function property(string $file): array
     {
         return [
             'size' => $this->formatSizeUnits(filesize($file)),
             'fileType' => filetype($file),
             'lastAccess' => fileatime($file),
-            'lastChange' => date('d-F-Y H:i:s.',filectime($file)),
+            'lastChange' => date('d-F-Y H:i:s.', filectime($file)),
             'fileGroup' => filegroup($file),
             'fileOwner' => fileowner($file),
-            'filePerms' => fileperms($file),    
+            'filePerms' => fileperms($file),
         ];
     }
-    
+
     /** Disk alanını döndürür.
      *  @param string $dir
      *  @return array
