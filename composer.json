@@ -1,21 +1,18 @@
 {
     "name": "ahmetbarut/file-manager",
-    "description": "Php dosya yöneticisi",
-    "type": "metapackage",
-    "license": "GPL-3",
+    "autoload": {
+        "psr-4": {
+            "ahmetbarut\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Ahmet Barut",
-            "email": "iletisim@ahmetbarut.net"
+            "email": "ahmetbarut588@gmail.com"
         }
     ],
     "require": {},
-    "autoload": {
-        "psr-4": {
-            "ahmetbarut\\" : "./src"
-        },
-        "files": [
-            "src/helper/directory.php"
-        ]
-    }
+    "files": [
+        "../src/helper/directory.php"
+    ]
 }

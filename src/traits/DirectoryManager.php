@@ -4,9 +4,10 @@ namespace ahmetbarut\traits;
 
 class DirectoryManager extends FileManager
 {
-    /** Dizini açar
-     *  @param string $path
-     *  @return array
+    /** 
+     * Belirtilen dizini açar 
+     * @param string $path
+     * @return array
      */
     public function directoryOpen(string $path): array
     {
